@@ -35,6 +35,24 @@
     var trigger = item.querySelector('.nav-dropdown-trigger');
     if (!trigger) return;
 
+    var closeTimer;
+
+    function openDropdown() {
+      clearTimeout(closeTimer);
+      item.classList.add('is-open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+      closeTimer = setTimeout(function () {
+        item.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }, 120);
+    }
+
+    item.addEventListener('mouseenter', openDropdown);
+    item.addEventListener('mouseleave', closeDropdown);
+
     trigger.addEventListener('click', function (e) {
       if (window.innerWidth > 768) return;
       e.preventDefault();

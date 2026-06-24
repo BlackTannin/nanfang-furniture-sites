@@ -1133,7 +1133,6 @@ h1, h2, h3, h4 {
   transition: transform var(--transition);
 }
 
-.nav-item--dropdown:hover .nav-caret,
 .nav-item--dropdown.is-open .nav-caret,
 .nav-item--dropdown:focus-within .nav-caret {
   transform: rotate(180deg);
@@ -1141,9 +1140,9 @@ h1, h2, h3, h4 {
 
 .nav-dropdown {
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(6px);
+  transform: translateX(-50%) translateY(4px);
   min-width: 148px;
   background: #fff;
   border: 1px solid var(--paper-dark);
@@ -1153,13 +1152,22 @@ h1, h2, h3, h4 {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   z-index: 1100;
 }
 
-.nav-item--dropdown:hover .nav-dropdown,
-.nav-item--dropdown:focus-within .nav-dropdown,
-.nav-item--dropdown.is-open .nav-dropdown {
+/* 悬停桥接区：防止移入子菜单时菜单消失 */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -14px;
+  height: 14px;
+}
+
+.nav-item--dropdown.is-open .nav-dropdown,
+.nav-item--dropdown:focus-within .nav-dropdown {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;

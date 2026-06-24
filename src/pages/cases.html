@@ -29,8 +29,16 @@ jsonLd: {
 
   <section class="content-section">
     <div class="container">
+      <div class="cases-filter fade-in" role="tablist" aria-label="案例分类筛选">
+        <button type="button" class="cases-filter-btn is-active" data-filter="all" role="tab" aria-selected="true">全部</button>
+        <button type="button" class="cases-filter-btn" data-filter="living" role="tab" aria-selected="false">客厅</button>
+        <button type="button" class="cases-filter-btn" data-filter="kitchen" role="tab" aria-selected="false">厨房</button>
+        <button type="button" class="cases-filter-btn" data-filter="bedroom" role="tab" aria-selected="false">卧室</button>
+        <button type="button" class="cases-filter-btn" data-filter="other" role="tab" aria-selected="false">其他</button>
+      </div>
+
       <div class="cases-grid fade-in">
-        <article class="case-card">
+        <article class="case-card" data-category="living">
           [[pic:case-living|滨河新城三居室客厅定制实景|case-img|lazy]]
           <div class="case-body">
             <span class="case-tag">现代简约 · 实景</span>
@@ -44,7 +52,7 @@ jsonLd: {
             </ul>
           </div>
         </article>
-        <article class="case-card">
+        <article class="case-card" data-category="kitchen">
           [[pic:case-kitchen|阳光里小区厨房橱柜实景|case-img|lazy]]
           <div class="case-body">
             <span class="case-tag">轻奢 · 实景</span>
@@ -58,7 +66,7 @@ jsonLd: {
             </ul>
           </div>
         </article>
-        <article class="case-card">
+        <article class="case-card" data-category="bedroom">
           [[pic:case-bedroom|锦绣华府主卧衣帽间实景|case-img|lazy]]
           <div class="case-body">
             <span class="case-tag">奶油原木 · 实景</span>
@@ -72,7 +80,7 @@ jsonLd: {
             </ul>
           </div>
         </article>
-        <article class="case-card">
+        <article class="case-card" data-category="other">
           [[pic:case-entry|中央公园玄关收纳实景|case-img|lazy]]
           <div class="case-body">
             <span class="case-tag">极简 · 实景</span>
@@ -86,7 +94,65 @@ jsonLd: {
             </ul>
           </div>
         </article>
+        <article class="case-card" data-category="other">
+          [[pic:case-study|翠湖名苑书房书柜定制实景|case-img|lazy]]
+          <div class="case-body">
+            <span class="case-tag">现代简约 · 实景</span>
+            <h2>翠湖名苑 · 书房书柜</h2>
+            <p>靠窗书桌与整墙书柜一体，开放格放书、封闭柜收纳杂物，台面留足办公与阅读空间。</p>
+            <ul class="case-meta">
+              <li>区域：城东 · 翠湖名苑</li>
+              <li>面积：约9㎡（书房）</li>
+              <li>参考价：1.2—1.6万</li>
+              <li>周期：18天</li>
+            </ul>
+          </div>
+        </article>
+        <article class="case-card" data-category="bedroom">
+          [[pic:case-tatami|万科城次卧榻榻米实景|case-img|lazy]]
+          <div class="case-body">
+            <span class="case-tag">多功能 · 实景</span>
+            <h2>万科城 · 次卧榻榻米</h2>
+            <p>8㎡次卧做榻榻米 + 升降台 + 大抽屉，靠墙整排储物柜，兼顾客房与收纳需求。</p>
+            <ul class="case-meta">
+              <li>区域：城南 · 万科城</li>
+              <li>面积：8㎡（次卧）</li>
+              <li>参考价：1.5—2.0万</li>
+              <li>周期：20天</li>
+            </ul>
+          </div>
+        </article>
+        <article class="case-card" data-category="other">
+          [[pic:case-balcony|金域华府阳台洗衣柜实景|case-img|lazy]]
+          <div class="case-body">
+            <span class="case-tag">实用收纳 · 实景</span>
+            <h2>金域华府 · 阳台洗衣柜</h2>
+            <p>阳台一侧做洗衣柜 + 吊柜，嵌入洗衣机与洗手盆，上方晾衣区，小空间利用充分。</p>
+            <ul class="case-meta">
+              <li>区域：城西 · 金域华府</li>
+              <li>面积：约4㎡（阳台）</li>
+              <li>参考价：0.6—0.9万</li>
+              <li>周期：12天</li>
+            </ul>
+          </div>
+        </article>
+        <article class="case-card" data-category="living">
+          [[pic:case-dining|龙湖天街餐厅餐边柜实景|case-img|lazy]]
+          <div class="case-body">
+            <span class="case-tag">轻奢 · 实景</span>
+            <h2>龙湖天街 · 餐厅餐边柜</h2>
+            <p>餐厅靠墙餐边柜 + 酒格 + 玻璃展示柜，与餐桌灯带呼应，日常收纳与待客展示两不误。</p>
+            <ul class="case-meta">
+              <li>区域：城北 · 龙湖天街</li>
+              <li>面积：约12㎡（餐厅）</li>
+              <li>参考价：1.0—1.5万</li>
+              <li>周期：16天</li>
+            </ul>
+          </div>
+        </article>
       </div>
+
+      <p class="cases-empty fade-in" hidden>该分类暂无案例，请选择其他分类查看。</p>
     </div>
   </section>
 

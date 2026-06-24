@@ -77,10 +77,45 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     fadeEls.forEach(function (el) { observer.observe(el); });
   } else {
     fadeEls.forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  var heroBg = document.querySelector('.hero-bg img');
+  if (heroBg) {
+    window.addEventListener('scroll', function () {
+      var offset = Math.min(window.scrollY * 0.25, 120);
+      heroBg.style.transform = 'translateY(' + offset + 'px) scale(1.05)';
+    }, { passive: true });
+  }
+
+  var caseFilter = document.querySelector('.cases-filter');
+  if (caseFilter) {
+    var filterBtns = caseFilter.querySelectorAll('.cases-filter-btn');
+    var caseCards = document.querySelectorAll('.case-card');
+    var emptyMsg = document.querySelector('.cases-empty');
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter');
+        filterBtns.forEach(function (b) {
+          var active = b === btn;
+          b.classList.toggle('is-active', active);
+          b.setAttribute('aria-selected', String(active));
+        });
+
+        var visible = 0;
+        caseCards.forEach(function (card) {
+          var match = filter === 'all' || card.getAttribute('data-category') === filter;
+          card.classList.toggle('is-hidden', !match);
+          if (match) visible++;
+        });
+
+        if (emptyMsg) emptyMsg.hidden = visible > 0;
+      });
+    });
   }
 
   if (contactForm) {

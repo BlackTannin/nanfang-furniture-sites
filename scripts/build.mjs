@@ -7,7 +7,8 @@ const root = path.join(__dirname, '..');
 const pagesDir = path.join(root, 'src', 'pages');
 const viewDir = path.join(root, 'view');
 
-const SITE = 'https://www.xinzhongshi.com';
+const site = JSON.parse(fs.readFileSync(path.join(root, 'src', 'site.config.json'), 'utf8'));
+const SITE = site.siteUrl.replace(/\/$/, '');
 const DEFAULT_OG = `${SITE}/images/og.jpg`;
 
 const headerTpl = fs.readFileSync(path.join(root, 'partials/header.html'), 'utf8');
@@ -47,7 +48,7 @@ function applyPaths(tpl, paths) {
 }
 
 function renderHeader(active, paths) {
-  const keys = ['index', 'xinzhongshi', 'song', 'ming', 'tang', 'cases', 'about', 'contact'];
+  const keys = ['index', 'custom', 'products', 'zhongshi', 'cases', 'about', 'contact'];
   let html = applyPaths(headerTpl, paths);
   for (const k of keys) {
     html = html.replace(`{{ACTIVE_${k}}}`, navClass(active, k));

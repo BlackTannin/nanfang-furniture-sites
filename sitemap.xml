@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.xinzhongshi.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/xinzhongshi.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/song.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/ming.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/tang.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/cases.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.xinzhongshi.com/view/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/custom.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/products.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/xinzhongshi.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/song.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/ming.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/tang.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/cases.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/about.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://blacktannin.github.io/nanfang-furniture-sites/view/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

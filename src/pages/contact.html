@@ -1,27 +1,25 @@
 ---
 file: contact.html
 active: contact
-title: 联系我们 | 心中式家居 - 预约咨询与展厅参观
-description: 联系心中式家居，预约免费上门量尺、家具定制咨询或苏州展厅参观。电话 0512-8888-8888，hello@xinzhongshi.com。
-keywords: 心中式家居联系方式,中式家具定制咨询,苏州家具展厅,预约量尺
-canonical: https://www.xinzhongshi.com/view/contact.html
-ogTitle: 联系我们 | 心中式家居
-ogDescription: 预约免费上门量尺、家具定制咨询或展厅参观。
-ogImage: https://www.xinzhongshi.com/images/og.jpg
+title: 联系我们 | 南方全屋定制 - 预约量尺与工厂参观
+description: 联系南方全屋定制，预约免费上门量尺、获取报价或参观南关工厂。服务本县及周边乡镇，现代简约与新中式均可承接。
+keywords: 南方全屋定制联系方式,本县家具厂电话,预约量尺,全屋定制咨询
+canonical: https://blacktannin.github.io/nanfang-furniture-sites/view/contact.html
+ogTitle: 联系我们 | 南方全屋定制
+ogDescription: 预约免费上门量尺、获取报价或参观工厂。
+ogImage: https://blacktannin.github.io/nanfang-furniture-sites/images/og.jpg
 jsonLd: {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "name": "联系心中式家居",
-  "url": "https://www.xinzhongshi.com/view/contact.html",
+  "name": "联系南方全屋定制",
+  "url": "https://blacktannin.github.io/nanfang-furniture-sites/view/contact.html",
   "mainEntity": {
     "@type": "Organization",
-    "name": "心中式家居",
-    "telephone": "+86-0512-88888888",
-    "email": "hello@xinzhongshi.com",
+    "name": "南方全屋定制",
+    "alternateName": "南方家具厂",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "苏州市姑苏区",
-      "addressRegion": "江苏省",
+      "addressLocality": "本县南关",
       "addressCountry": "CN"
     }
   }
@@ -34,7 +32,7 @@ jsonLd: {
       <nav class="breadcrumb" aria-label="面包屑导航"><a href="../index.html">首页</a><span>/</span><span>联系我们</span></nav>
       <span class="section-tag">预约咨询</span>
       <h1>联系我们</h1>
-      <p class="lead">无论您偏爱新中式、宋式、明式还是唐式，我们的顾问都将为您提供一对一的定制方案。</p>
+      <p class="lead">无论是现代全屋定制，还是心中式特色系列，顾问都会根据您的户型和预算给出方案。本县及周边免费上门量尺。</p>
     </div>
   </header>
 
@@ -43,25 +41,24 @@ jsonLd: {
       <div class="contact-info">
         <h2 id="contact-section">联系方式</h2>
         <div class="contact-detail">
-          <h3>电话咨询</h3>
-          <p><a href="tel:+86051288888888">0512-8888-8888</a></p>
-          <p>工作日 9:00—18:00</p>
+          <h3>工厂地址</h3>
+          <address><p>本县南关</p><p>南方全屋定制（原南方家具厂）</p></address>
         </div>
         <div class="contact-detail">
-          <h3>电子邮箱</h3>
-          <p><a href="mailto:hello@xinzhongshi.com">hello@xinzhongshi.com</a></p>
+          <h3>服务范围</h3>
+          <p>本县主城区及各乡镇，周边县域可预约</p>
         </div>
         <div class="contact-detail">
-          <h3>展厅地址</h3>
-          <address><p>江苏省苏州市姑苏区</p><p>心中式家居体验馆</p></address>
+          <h3>营业时间</h3>
+          <p>每日 8:00—18:00（建议提前预约）</p>
         </div>
         <div class="contact-detail">
           <h3>服务内容</h3>
           <ul class="feature-list">
-            <li>免费上门量尺（苏州及周边城市）</li>
-            <li>3D空间效果图设计</li>
-            <li>材质与工艺选样</li>
-            <li>全屋家具定制方案</li>
+            <li>免费上门量尺（本县及周边）</li>
+            <li>全屋定制方案与报价</li>
+            <li>工厂参观与板材选样</li>
+            <li>定制柜体 + 成品家具打包方案</li>
           </ul>
         </div>
       </div>
@@ -79,19 +76,21 @@ jsonLd: {
           <p class="form-error" id="phone-error" role="alert"></p>
         </div>
         <div class="form-group">
-          <label for="style">感兴趣的风格</label>
+          <label for="style">需求类型</label>
           <select id="style" name="style">
             <option value="">请选择</option>
-            <option value="新中式">新中式</option>
-            <option value="宋式">宋式</option>
-            <option value="明式">明式</option>
-            <option value="唐式">唐式</option>
-            <option value="多种风格组合">多种风格组合</option>
+            <option value="全屋定制">全屋定制</option>
+            <option value="橱柜">厨房橱柜</option>
+            <option value="衣柜">衣柜衣帽间</option>
+            <option value="现代简约">现代简约</option>
+            <option value="新中式">新中式 / 心中式系列</option>
+            <option value="成品家具">成品家具配套</option>
+            <option value="其他">其他</option>
           </select>
         </div>
         <div class="form-group">
           <label for="message">留言</label>
-          <textarea id="message" name="message" placeholder="请描述您的空间面积、需求或疑问"></textarea>
+          <textarea id="message" name="message" placeholder="请描述小区/乡镇、面积、大致需求"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" id="submit-btn">提交预约</button>
         <p class="form-success" id="form-success" role="status" hidden>感谢您的预约！我们将在1个工作日内与您联系。</p>

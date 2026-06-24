@@ -1,7 +1,7 @@
 {
   "name": "nanfang-furniture-sites",
   "private": true,
-  "description": "南方家具厂官网仓库：xinzhongshi 心中式品牌 + nanfang-quanwu 南方全屋定制",
+  "description": "南方家具厂官网：中式风格品牌分支 + 南方全屋定制主站",
   "brand": "南方全屋定制",
   "brandBranch": "nanfang-quanwu",
   "scripts": {

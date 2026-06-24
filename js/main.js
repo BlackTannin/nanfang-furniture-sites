@@ -21,9 +21,34 @@
       link.addEventListener('click', function () {
         mainNav.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
+        mainNav.querySelectorAll('.nav-item--dropdown').forEach(function (item) {
+          item.classList.remove('is-open');
+          var trigger = item.querySelector('.nav-dropdown-trigger');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
       });
     });
   }
+
+  var dropdownItems = document.querySelectorAll('.nav-item--dropdown');
+  dropdownItems.forEach(function (item) {
+    var trigger = item.querySelector('.nav-dropdown-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', function (e) {
+      if (window.innerWidth > 768) return;
+      e.preventDefault();
+      var isOpen = item.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', String(isOpen));
+      dropdownItems.forEach(function (other) {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          var otherTrigger = other.querySelector('.nav-dropdown-trigger');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  });
 
   var fadeEls = document.querySelectorAll('.fade-in');
   if (fadeEls.length && 'IntersectionObserver' in window) {
@@ -49,6 +74,7 @@
     var formSuccess = document.getElementById('form-success');
     var formError = document.getElementById('form-error');
     var submitBtn = document.getElementById('submit-btn');
+    var brand = (window.SITE_CONFIG && window.SITE_CONFIG.brand) || '南方全屋定制';
 
     function show(el, msg) {
       if (!el) return;
@@ -83,7 +109,7 @@
       var key = config.web3formsKey;
 
       if (!key) {
-        show(formError, '表单服务尚未配置。请在 js/config.js 中填入 Web3Forms Access Key，或直接致电 0512-8888-8888。');
+        show(formError, '表单服务尚未配置。请在 js/config.js 中填入 Web3Forms Access Key，或直接来厂咨询。');
         return;
       }
 
@@ -96,7 +122,7 @@
         phone: phoneInput.value.trim(),
         style: document.getElementById('style').value,
         message: document.getElementById('message').value.trim(),
-        subject: '心中式家居 - 在线预约'
+        subject: brand + ' - 在线预约'
       };
 
       fetch('https://api.web3forms.com/submit', {
@@ -110,7 +136,7 @@
             formSuccess.hidden = false;
             contactForm.reset();
           } else {
-            show(formError, '提交失败，请稍后重试或直接致电我们。');
+            show(formError, '提交失败，请稍后重试或直接来厂咨询。');
           }
         })
         .catch(function () {

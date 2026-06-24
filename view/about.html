@@ -51,11 +51,19 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" aria-label="主导航">
-        <ul>
+        <ul class="nav-list">
           <li><a href="../index.html">首页</a></li>
           <li><a href="custom.html">全屋定制</a></li>
           <li><a href="products.html">产品中心</a></li>
-          <li><a href="xinzhongshi.html">中式风格</a></li>
+          <li class="nav-item--dropdown">
+            <a href="xinzhongshi.html" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">中式风格<span class="nav-caret" aria-hidden="true"></span></a>
+            <ul class="nav-dropdown" aria-label="中式风格子菜单">
+              <li><a href="xinzhongshi.html">新中式</a></li>
+              <li><a href="song.html">宋式</a></li>
+              <li><a href="ming.html">明式</a></li>
+              <li><a href="tang.html">唐式</a></li>
+            </ul>
+          </li>
           <li><a href="cases.html">案例</a></li>
           <li><a href="about.html" class="active">关于工厂</a></li>
           <li><a href="contact.html">联系我们</a></li>
@@ -78,8 +86,8 @@
   <section class="content-section" aria-labelledby="about-story">
     <div class="container content-grid fade-in">
       <picture class="content-visual">
-  <source srcset="../images/about-workshop.webp" type="image/webp">
-  <img src="../images/about-workshop.jpg" alt="南方家具厂车间生产场景" width="800" height="530" loading="lazy" decoding="async">
+  <source srcset="../images/factory-workshop.webp" type="image/webp">
+  <img src="../images/factory-workshop.jpg" alt="南方家具厂车间生产场景" width="800" height="530" loading="lazy" decoding="async">
 </picture>
       <div class="content-text">
         <h2 id="about-story">二十年，一直在南关</h2>

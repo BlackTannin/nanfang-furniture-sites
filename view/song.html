@@ -31,7 +31,7 @@
 }
   </script>
 </head>
-<body>
+<body class="theme-zhongshi">
 
   <a href="#main" class="skip-link">跳至主要内容</a>
 
@@ -45,11 +45,19 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" aria-label="主导航">
-        <ul>
+        <ul class="nav-list">
           <li><a href="../index.html">首页</a></li>
           <li><a href="custom.html">全屋定制</a></li>
           <li><a href="products.html">产品中心</a></li>
-          <li><a href="xinzhongshi.html" class="active">中式风格</a></li>
+          <li class="nav-item--dropdown">
+            <a href="xinzhongshi.html" class="nav-dropdown-trigger" class="active" aria-haspopup="true" aria-expanded="false">中式风格<span class="nav-caret" aria-hidden="true"></span></a>
+            <ul class="nav-dropdown" aria-label="中式风格子菜单">
+              <li><a href="xinzhongshi.html">新中式</a></li>
+              <li><a href="song.html" class="active">宋式</a></li>
+              <li><a href="ming.html">明式</a></li>
+              <li><a href="tang.html">唐式</a></li>
+            </ul>
+          </li>
           <li><a href="cases.html">案例</a></li>
           <li><a href="about.html">关于工厂</a></li>
           <li><a href="contact.html">联系我们</a></li>

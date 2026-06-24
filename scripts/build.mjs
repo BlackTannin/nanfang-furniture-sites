@@ -37,6 +37,9 @@ function parseFrontMatter(raw) {
 }
 
 function navClass(active, key) {
+  if (key === 'zhongshi') {
+    return ['zhongshi', 'xinzhongshi', 'song', 'ming', 'tang'].includes(active) ? ' class="active"' : '';
+  }
   return active === key ? ' class="active"' : '';
 }
 
@@ -48,7 +51,7 @@ function applyPaths(tpl, paths) {
 }
 
 function renderHeader(active, paths) {
-  const keys = ['index', 'custom', 'products', 'zhongshi', 'cases', 'about', 'contact'];
+  const keys = ['index', 'custom', 'products', 'zhongshi', 'xinzhongshi', 'song', 'ming', 'tang', 'cases', 'about', 'contact'];
   let html = applyPaths(headerTpl, paths);
   for (const k of keys) {
     html = html.replace(`{{ACTIVE_${k}}}`, navClass(active, k));
@@ -64,6 +67,7 @@ function renderHead(meta, paths) {
   const canonical = meta.canonical || SITE + '/';
   const ogImage = meta.ogImage || DEFAULT_OG;
   const ogType = meta.ogType || 'website';
+  const themeClass = meta.theme ? ` class="theme-${meta.theme}"` : '';
   let jsonLd = meta.jsonLd || '';
   if (jsonLd && !jsonLd.trim().startsWith('{')) jsonLd = '';
 
@@ -91,7 +95,7 @@ function renderHead(meta, paths) {
   <link rel="stylesheet" href="${paths.root}css/style.css">
   ${jsonLd ? `<script type="application/ld+json">\n${jsonLd}\n  </script>` : ''}
 </head>
-<body>`;
+<body${themeClass}>`;
 }
 
 function expandPictures(html, assetRoot) {

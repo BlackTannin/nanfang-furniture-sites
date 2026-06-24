@@ -44,11 +44,19 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="main-nav" aria-label="主导航">
-        <ul>
+        <ul class="nav-list">
           <li><a href="../index.html">首页</a></li>
           <li><a href="custom.html">全屋定制</a></li>
           <li><a href="products.html" class="active">产品中心</a></li>
-          <li><a href="xinzhongshi.html">中式风格</a></li>
+          <li class="nav-item--dropdown">
+            <a href="xinzhongshi.html" class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">中式风格<span class="nav-caret" aria-hidden="true"></span></a>
+            <ul class="nav-dropdown" aria-label="中式风格子菜单">
+              <li><a href="xinzhongshi.html">新中式</a></li>
+              <li><a href="song.html">宋式</a></li>
+              <li><a href="ming.html">明式</a></li>
+              <li><a href="tang.html">唐式</a></li>
+            </ul>
+          </li>
           <li><a href="cases.html">案例</a></li>
           <li><a href="about.html">关于工厂</a></li>
           <li><a href="contact.html">联系我们</a></li>
@@ -94,24 +102,24 @@
       <div class="cases-grid fade-in">
         <article class="case-card">
           <picture class="case-img">
-  <source srcset="../images/product-sofa.webp" type="image/webp">
-  <img src="../images/product-sofa.jpg" alt="成品沙发客厅搭配" width="800" height="530" loading="lazy" decoding="async">
+  <source srcset="../images/modern-kitchen.webp" type="image/webp">
+  <img src="../images/modern-kitchen.jpg" alt="现代厨房橱柜定制" width="800" height="530" loading="lazy" decoding="async">
 </picture>
           <div class="case-body">
-            <span class="case-tag">客厅</span>
-            <h2>沙发 · 茶几</h2>
-            <p>布艺、皮质沙发及配套茶几，与定制电视柜、背景墙柜统一搭配。</p>
+            <span class="case-tag">厨房</span>
+            <h2>橱柜 · 台面</h2>
+            <p>地柜、吊柜、台面一体定制，合理规划厨房动线与收纳。</p>
           </div>
         </article>
         <article class="case-card">
           <picture class="case-img">
-  <source srcset="../images/product-daybed.webp" type="image/webp">
-  <img src="../images/product-daybed.jpg" alt="卧室床具与床头柜" width="800" height="530" loading="lazy" decoding="async">
+  <source srcset="../images/modern-wardrobe.webp" type="image/webp">
+  <img src="../images/modern-wardrobe.jpg" alt="卧室衣柜衣帽间定制" width="800" height="530" loading="lazy" decoding="async">
 </picture>
           <div class="case-body">
             <span class="case-tag">卧室</span>
-            <h2>床 · 床垫 · 床头柜</h2>
-            <p>软床、实木床及床垫，与定制衣柜、梳妆台组合方案。</p>
+            <h2>衣柜 · 衣帽间</h2>
+            <p>推拉门、平开门衣柜及衣帽间系统，内部格局按需定制。</p>
           </div>
         </article>
         <article class="case-card">

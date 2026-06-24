@@ -50,9 +50,29 @@ function applyPaths(tpl, paths) {
     .replaceAll('{{VIEW}}', paths.view);
 }
 
+function applySite(tpl) {
+  return tpl
+    .replaceAll('{{BRAND}}', site.brand)
+    .replaceAll('{{BRAND_ALT}}', site.brandAlt || site.brand)
+    .replaceAll('{{LEGAL_NAME}}', site.legalName)
+    .replaceAll('{{TAGLINE}}', site.tagline)
+    .replaceAll('{{PHONE}}', site.phone)
+    .replaceAll('{{PHONE_TEL}}', site.phoneTel)
+    .replaceAll('{{WECHAT}}', site.wechat)
+    .replaceAll('{{WECHAT_NOTE}}', site.wechatNote || '')
+    .replaceAll('{{EMAIL}}', site.email || '')
+    .replaceAll('{{ADDRESS}}', site.address)
+    .replaceAll('{{CITY}}', site.city || '')
+    .replaceAll('{{SERVICE_AREA}}', site.serviceArea)
+    .replaceAll('{{WORK_HOURS}}', site.workHours || '')
+    .replaceAll('{{MAP_LINK}}', site.mapLink || '#')
+    .replaceAll('{{MAP_EMBED}}', site.mapEmbed || '')
+    .replaceAll('{{WARRANTY}}', site.warranty || '');
+}
+
 function renderHeader(active, paths) {
-  const keys = ['index', 'custom', 'products', 'zhongshi', 'xinzhongshi', 'song', 'ming', 'tang', 'cases', 'about', 'contact'];
-  let html = applyPaths(headerTpl, paths);
+  const keys = ['index', 'custom', 'zhongshi', 'xinzhongshi', 'song', 'ming', 'tang', 'cases', 'about', 'contact'];
+  let html = applySite(applyPaths(headerTpl, paths));
   for (const k of keys) {
     html = html.replace(`{{ACTIVE_${k}}}`, navClass(active, k));
   }
@@ -60,7 +80,7 @@ function renderHeader(active, paths) {
 }
 
 function renderFooter(paths) {
-  return applyPaths(footerTpl, paths);
+  return applySite(applyPaths(footerTpl, paths));
 }
 
 function renderHead(meta, paths) {
@@ -124,7 +144,7 @@ for (const file of files) {
   const isIndex = (meta.file || file) === 'index.html';
   const paths = isIndex ? pathSets.root : pathSets.view;
   const active = meta.active || '';
-  const content = expandPictures(body, paths.root);
+  const content = expandPictures(applySite(body), paths.root);
   const page = [
     renderHead(meta, paths),
     renderHeader(active, paths),
@@ -155,3 +175,18 @@ for (const name of fs.readdirSync(root)) {
 }
 
 console.log(`Done — ${files.length} pages.`);
+
+const configJs = `window.SITE_CONFIG = ${JSON.stringify({
+  siteUrl: site.siteUrl,
+  brand: site.brand,
+  legalName: site.legalName,
+  phone: site.phone,
+  phoneTel: site.phoneTel,
+  wechat: site.wechat,
+  address: site.address,
+  city: site.city,
+  serviceArea: site.serviceArea,
+  web3formsKey: ''
+}, null, 2)};\n`;
+fs.writeFileSync(path.join(root, 'js', 'config.js'), configJs, 'utf8');
+console.log('Built js/config.js');

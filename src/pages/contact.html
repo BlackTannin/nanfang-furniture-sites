@@ -2,11 +2,11 @@
 file: contact.html
 active: contact
 title: 联系我们 | 南方全屋定制 - 预约量尺与工厂参观
-description: 联系南方全屋定制，预约免费上门量尺、获取报价或参观南关工厂。服务本县及周边乡镇，现代简约与新中式均可承接。
-keywords: 南方全屋定制联系方式,本县家具厂电话,预约量尺,全屋定制咨询
+description: 联系南方全屋定制，电话预约免费上门量尺、获取报价或参观南方家具厂。示例市及周边均可服务。
+keywords: 南方全屋定制电话,南方家具厂地址,预约量尺,全屋定制咨询
 canonical: https://blacktannin.github.io/nanfang-furniture-sites/view/contact.html
 ogTitle: 联系我们 | 南方全屋定制
-ogDescription: 预约免费上门量尺、获取报价或参观工厂。
+ogDescription: 电话微信预约免费上门量尺，欢迎参观工厂。
 ogImage: https://blacktannin.github.io/nanfang-furniture-sites/images/og.jpg
 jsonLd: {
   "@context": "https://schema.org",
@@ -17,9 +17,11 @@ jsonLd: {
     "@type": "Organization",
     "name": "南方全屋定制",
     "alternateName": "南方家具厂",
+    "telephone": "+86-400-888-5168",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "本县南关",
+      "streetAddress": "滨河路168号",
+      "addressLocality": "示例市",
       "addressCountry": "CN"
     }
   }
@@ -32,7 +34,7 @@ jsonLd: {
       <nav class="breadcrumb" aria-label="面包屑导航"><a href="../index.html">首页</a><span>/</span><span>联系我们</span></nav>
       <span class="section-tag">预约咨询</span>
       <h1>联系我们</h1>
-      <p class="lead">无论是现代全屋定制，还是中式风格系列，顾问都会根据您的户型和预算给出方案。本县及周边免费上门量尺。</p>
+      <p class="lead">现代全屋定制或中式风格系列，顾问均可根据户型和预算出方案。本地及周边免费上门量尺。</p>
     </div>
   </header>
 
@@ -40,62 +42,71 @@ jsonLd: {
     <div class="container contact-layout fade-in">
       <div class="contact-info">
         <h2 id="contact-section">联系方式</h2>
+        <div class="contact-detail contact-detail--highlight">
+          <h3>电话咨询</h3>
+          <p class="contact-big"><a href="tel:{{PHONE_TEL}}">{{PHONE}}</a></p>
+          <p>{{WORK_HOURS}}</p>
+        </div>
+        <div class="contact-detail">
+          <h3>微信咨询</h3>
+          <p class="contact-big">{{WECHAT}}</p>
+          <p>{{WECHAT_NOTE}}</p>
+        </div>
         <div class="contact-detail">
           <h3>工厂地址</h3>
-          <address><p>本县南关</p><p>南方全屋定制（原南方家具厂）</p></address>
+          <address>
+            <p>{{LEGAL_NAME}}</p>
+            <p>{{CITY}}{{ADDRESS}}</p>
+          </address>
+          <p><a href="{{MAP_LINK}}" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">打开地图导航</a></p>
         </div>
         <div class="contact-detail">
           <h3>服务范围</h3>
-          <p>本县主城区及各乡镇，周边县域可预约</p>
-        </div>
-        <div class="contact-detail">
-          <h3>营业时间</h3>
-          <p>每日 8:00—18:00（建议提前预约）</p>
+          <p>{{SERVICE_AREA}}</p>
         </div>
         <div class="contact-detail">
           <h3>服务内容</h3>
           <ul class="feature-list">
-            <li>免费上门量尺（本县及周边）</li>
-            <li>全屋定制方案与报价</li>
+            <li>免费上门量尺、出图报价</li>
             <li>工厂参观与板材选样</li>
             <li>定制柜体 + 成品家具打包方案</li>
           </ul>
         </div>
       </div>
 
-      <form class="contact-form" id="contact-form" novalidate aria-labelledby="form-title">
-        <h2 id="form-title" class="form-title">在线预约</h2>
-        <div class="form-group">
-          <label for="name">姓名 <span aria-hidden="true">*</span></label>
-          <input type="text" id="name" name="name" required autocomplete="name" placeholder="请输入您的姓名">
-          <p class="form-error" id="name-error" role="alert"></p>
+      <div class="contact-side">
+        <div class="map-embed" aria-label="工厂位置地图">
+          <iframe src="{{MAP_EMBED}}" title="南方家具厂位置地图" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="form-group">
-          <label for="phone">电话 <span aria-hidden="true">*</span></label>
-          <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="11位手机号" pattern="^1[3-9]\d{9}$">
-          <p class="form-error" id="phone-error" role="alert"></p>
-        </div>
-        <div class="form-group">
-          <label for="style">需求类型</label>
-          <select id="style" name="style">
-            <option value="">请选择</option>
-            <option value="全屋定制">全屋定制</option>
-            <option value="橱柜">厨房橱柜</option>
-            <option value="衣柜">衣柜衣帽间</option>
-            <option value="现代简约">现代简约</option>
-            <option value="新中式">新中式</option>
-            <option value="成品家具">成品家具配套</option>
-            <option value="其他">其他</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">留言</label>
-          <textarea id="message" name="message" placeholder="请描述小区/乡镇、面积、大致需求"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" id="submit-btn">提交预约</button>
-        <p class="form-success" id="form-success" role="status" hidden>感谢您的预约！我们将在1个工作日内与您联系。</p>
-        <p class="form-error" id="form-error" role="alert" hidden></p>
-      </form>
+
+        <form class="contact-form" id="contact-form" novalidate aria-labelledby="form-title">
+          <h2 id="form-title" class="form-title">在线预约</h2>
+          <p class="form-note">在线表单即将开通，请先电话或微信联系。留下信息仅供预览，不会真实提交。</p>
+          <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="请输入您的姓名" disabled>
+          </div>
+          <div class="form-group">
+            <label for="phone">电话</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="11位手机号" disabled>
+          </div>
+          <div class="form-group">
+            <label for="style">需求类型</label>
+            <select id="style" name="style" disabled>
+              <option value="">请选择</option>
+              <option value="全屋定制">全屋定制</option>
+              <option value="橱柜">厨房橱柜</option>
+              <option value="衣柜">衣柜衣帽间</option>
+              <option value="新中式">新中式</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">留言</label>
+            <textarea id="message" name="message" placeholder="小区、面积、大致需求" disabled></textarea>
+          </div>
+          <a href="tel:{{PHONE_TEL}}" class="btn btn-primary btn-block">直接拨打电话</a>
+        </form>
+      </div>
     </div>
   </section>
 </main>

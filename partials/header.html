@@ -1,5 +1,15 @@
   <a href="#main" class="skip-link">跳至主要内容</a>
 
+  <div class="header-contact-bar">
+    <div class="container header-contact-inner">
+      <a href="tel:{{PHONE_TEL}}" class="header-phone">{{PHONE}}</a>
+      <span class="header-contact-divider" aria-hidden="true">|</span>
+      <span>微信：{{WECHAT}}</span>
+      <span class="header-contact-divider" aria-hidden="true">|</span>
+      <span>{{WORK_HOURS}}</span>
+    </div>
+  </div>
+
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a href="{{HOME}}" class="logo" aria-label="南方全屋定制首页">
@@ -13,7 +23,6 @@
         <ul class="nav-list">
           <li><a href="{{HOME}}"{{ACTIVE_index}}>首页</a></li>
           <li><a href="{{VIEW}}custom.html"{{ACTIVE_custom}}>全屋定制</a></li>
-          <li><a href="{{VIEW}}products.html"{{ACTIVE_products}}>产品中心</a></li>
           <li class="nav-item--dropdown">
             <a href="{{VIEW}}xinzhongshi.html" class="nav-dropdown-trigger"{{ACTIVE_zhongshi}} aria-haspopup="true" aria-expanded="false">中式风格<span class="nav-caret" aria-hidden="true"></span></a>
             <ul class="nav-dropdown" aria-label="中式风格子菜单">
@@ -25,7 +34,7 @@
           </li>
           <li><a href="{{VIEW}}cases.html"{{ACTIVE_cases}}>案例</a></li>
           <li><a href="{{VIEW}}about.html"{{ACTIVE_about}}>关于工厂</a></li>
-          <li><a href="{{VIEW}}contact.html"{{ACTIVE_contact}}>联系我们</a></li>
+          <li><a href="{{VIEW}}contact.html" class="nav-cta"{{ACTIVE_contact}}>免费量尺</a></li>
         </ul>
       </nav>
     </div>

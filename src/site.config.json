@@ -1,12 +1,26 @@
 {
   "brand": "南方全屋定制",
+  "brandAlt": "南方定制家居",
   "legalName": "南方家具厂",
-  "tagline": "南关工厂 · 经营二十年",
+  "tagline": "南方家具厂 · 经营二十年",
   "formerName": "原南方家具厂",
   "siteUrl": "https://blacktannin.github.io/nanfang-furniture-sites",
-  "phone": "",
-  "phoneDisplay": "欢迎来电咨询",
-  "email": "",
-  "address": "本县南关",
-  "serviceArea": "本县及周边乡镇"
+  "phone": "400-888-5168",
+  "phoneTel": "+864008885168",
+  "wechat": "nanfang_jiaju",
+  "wechatNote": "添加微信请备注「定制咨询」",
+  "email": "service@nanfangjiaju.com",
+  "address": "滨河路168号南方家具厂",
+  "city": "示例市",
+  "serviceArea": "示例市及周边30公里",
+  "mapLink": "https://uri.amap.com/marker?position=116.397,39.909&name=南方家具厂",
+  "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=116.390%2C39.904%2C116.404%2C39.914&layer=mapnik&marker=39.909%2C116.397",
+  "workHours": "每日 8:00—18:00",
+  "materials": [
+    { "name": "板材", "desc": "兔宝宝 / 千年舟 E0级颗粒板、多层板" },
+    { "name": "五金", "desc": "海蒂诗 / 百隆 / DTC 铰链与导轨" },
+    { "name": "台面", "desc": "石英石、岩板（按预算选配）" },
+    { "name": "环保", "desc": "出厂前质检，可提供检测报告" }
+  ],
+  "warranty": "柜体质保5年，五金质保2年，终身维护咨询"
 }

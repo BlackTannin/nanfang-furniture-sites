@@ -84,6 +84,10 @@
   }
 
   if (contactForm) {
+    var formNote = contactForm.querySelector('.form-note');
+    if (formNote && contactForm.querySelector('[disabled]')) {
+      return;
+    }
     var phoneRe = /^1[3-9]\d{9}$/;
     var nameInput = document.getElementById('name');
     var phoneInput = document.getElementById('phone');

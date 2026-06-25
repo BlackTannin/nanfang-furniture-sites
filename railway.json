@@ -5,7 +5,9 @@
     "buildCommand": "npm run build"
   },
   "deploy": {
-    "startCommand": null,
-    "healthcheckPath": "/"
+    "healthcheckPath": "/",
+    "variables": {
+      "RAILPACK_SPA_OUTPUT_DIR": "."
+    }
   }
 }

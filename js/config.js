@@ -8,5 +8,5 @@ window.SITE_CONFIG = {
   "address": "滨河路168号南方家具厂",
   "city": "示例市",
   "serviceArea": "示例市及周边30公里",
-  "web3formsKey": ""
+  "apiBaseUrl": "http://localhost:3001"
 };

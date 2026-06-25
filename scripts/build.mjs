@@ -186,7 +186,7 @@ const configJs = `window.SITE_CONFIG = ${JSON.stringify({
   address: site.address,
   city: site.city,
   serviceArea: site.serviceArea,
-  web3formsKey: ''
+  apiBaseUrl: site.apiBaseUrl || ''
 }, null, 2)};\n`;
 fs.writeFileSync(path.join(root, 'js', 'config.js'), configJs, 'utf8');
 console.log('Built js/config.js');

@@ -119,10 +119,6 @@
   }
 
   if (contactForm) {
-    var formNote = contactForm.querySelector('.form-note');
-    if (formNote && contactForm.querySelector('[disabled]')) {
-      return;
-    }
     var phoneRe = /^1[3-9]\d{9}$/;
     var nameInput = document.getElementById('name');
     var phoneInput = document.getElementById('phone');
@@ -163,10 +159,10 @@
       if (!validate()) return;
 
       var config = window.SITE_CONFIG || {};
-      var key = config.web3formsKey;
+      var apiBase = (config.apiBaseUrl || '').replace(/\/$/, '');
 
-      if (!key) {
-        show(formError, '表单服务尚未配置。请在 js/config.js 中填入 Web3Forms Access Key，或直接来厂咨询。');
+      if (!apiBase) {
+        show(formError, '表单服务尚未配置。请在 site.config.json 中设置 apiBaseUrl，或直接来厂咨询。');
         return;
       }
 
@@ -174,15 +170,14 @@
       submitBtn.textContent = '提交中…';
 
       var payload = {
-        access_key: key,
         name: nameInput.value.trim(),
         phone: phoneInput.value.trim(),
         style: document.getElementById('style').value,
         message: document.getElementById('message').value.trim(),
-        subject: brand + ' - 在线预约'
+        source: brand + ' - 在线预约'
       };
 
-      fetch('https://api.web3forms.com/submit', {
+      fetch(apiBase + '/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload)

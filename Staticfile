@@ -1,0 +1,4 @@
+# 构建产物在项目根目录；由 Railpack + Caddy 提供静态文件服务
+root: .
+# 多页面站点，未知路径返回 404，不回落到 index.html
+index_fallback: false

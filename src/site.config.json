@@ -16,6 +16,7 @@
   "mapLink": "https://uri.amap.com/marker?position=116.397,39.909&name=南方家具厂",
   "mapEmbed": "https://www.openstreetmap.org/export/embed.html?bbox=116.390%2C39.904%2C116.404%2C39.914&layer=mapnik&marker=39.909%2C116.397",
   "workHours": "每日 8:00—18:00",
+  "apiBaseUrl": "http://localhost:3001",
   "materials": [
     { "name": "板材", "desc": "兔宝宝 / 千年舟 E0级颗粒板、多层板" },
     { "name": "五金", "desc": "海蒂诗 / 百隆 / DTC 铰链与导轨" },
